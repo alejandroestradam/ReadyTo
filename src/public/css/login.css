@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+  color: black;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*    NAVBAR     */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #01a6e6;
+  height: 8vh;
+  color: white;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+.logo h1 {
+  font-weight: 500;
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+#login {
+  width: 20%;
+  display: flex;
+  justify-content: end;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  width: 30px;
+}
+
+/*    Register    */
+
+.register {
+  flex-direction: column;
+  height: 70vh;
+}
+.readyto {
+  flex-direction: column;
+  margin-top: 20px;
+}
+.readyto p {
+  margin: 0;
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+}
+.email p {
+  font-size: 14px;
+  margin: 0;
+  text-align: start;
+}
+.register input {
+  width: 350px;
+  height: 30px;
+}
+.register button {
+  width: 350px;
+  height: 40px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  background-color: #01a6e6;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+}
+.terms {
+  border-top: 0.5px solid #b0b0b0;
+  border-bottom: 0.5px solid #b0b0b0;
+  width: 350px;
+}
+.terms p {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

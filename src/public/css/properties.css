@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*    NAVBAR     */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #01a6e6;
+  height: 8vh;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+.logo h1 {
+  font-weight: 500;
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+#login {
+  width: 20%;
+  display: flex;
+  justify-content: end;
+}
+
+.link {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+}
+.link img {
+  width: 20px;
+  height: 20px;
+}
+.dropdown {
+  position: relative;
+  color: black;
+}
+.dropdown-menu {
+  position: absolute;
+  width: 150px;
+  left: -5rem;
+  top: calc(100% + 0.25rem);
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+.dropdown-menu a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+.dropdown-menu a:hover {
+  background-color: #dcdcdc;
+}
+.dropdown > .link:focus + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.login {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  width: 70px;
+}
+
+/*    Filters    */
+.Filters {
+  width: 60%;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.dropdown-btn {
+  background-color: white;
+  border-radius: 10px;
+  border: 0.1rem solid #dcdcdc;
+  height: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.dropdown-btn:hover {
+  border: 0.1rem solid black;
+}
+.dropdown-filters {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.5rem);
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropdown > .dropdown-btn:focus + .dropdown-filters {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.dropdown-filters input {
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  border: 0.1rem solid #dcdcdc;
+  margin: 10px;
+}
+.filters-list {
+  flex-direction: column;
+}
+.filters-list a {
+  font-size: 13px;
+  text-decoration: none;
+  color: black;
+  margin: 5px;
+}
+.filters-list a:hover {
+  background-color: #dcdcdc;
+}
+/*     Properties     */
+.properties {
+  margin-top: 130px;
+  flex-direction: column;
+}
+.grid-properties {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+  row-gap: 50px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.card {
+  width: 20vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.card h1 {
+  font-size: 100%;
+}
+.card p {
+  margin: 0;
+  font-size: 13px;
+}
+.card img {
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.text {
+  height: 20%;
+  width: 100%;
+}

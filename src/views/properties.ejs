@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/properties.css">
+    <!--<link rel="stylesheet" href="/src/public/css/properties.css">-->
+    <title>Properties</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://img.icons8.com/external-becris-solid-becris/64/000000/external-travel-coronavirus-becris-solid-becris.png" alt="logo"/>            
+                <h1>ReadyTo</h1>
+            </div>
+            <div id="login">
+            <div class="login">
+                <div class="dropdown">
+                    <button class="link">
+                        <img src="https://img.icons8.com/material-outlined/96/000000/menu--v1.png"/>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="/src/views/register.html">Registrarse</a>
+                        <a href="/src/views/login.html">Iniciar Sesión</a>
+                    </div>
+                </div>
+                <img src="https://img.icons8.com/fluency-systems-regular/96/000000/user.png" width="30px" height="30px"/>
+            </div>
+            </div>
+        </nav>
+      </header>
+      <section class="Filters">
+          <div class="dropdown">
+              <button class="dropdown-btn">Precio</button>
+              <div class="dropdown-filters">
+                  <input type="text"> - <input type="text">
+              </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-btn">Tipo de propiedad</button>
+            <div class="dropdown-filters filters-list">
+                <a href="">Casas</a>
+                <a href="">Departamentos</a>
+                <a href="">Cuartos privados</a>
+                <a href="">Estancias Únicas</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-btn">No. de Cuartos</button>
+            <div class="dropdown-filters">
+                <input type="text"> - <input type="text">
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-btn">No. de baños</button>
+            <div class="dropdown-filters">
+                <input type="text"> - <input type="text">
+            </div>
+        </div>
+      </section>
+      <section class="properties flex-center">
+          <h1>Descubre los más de 300 alojamientos</h1>
+          <div class="grid-properties" id="grid-properties">
+           <% properties.forEach(function(row){ %>
+            <figure class="card">
+                <img src="<%= row.images.picture_url %>"" alt="">
+                <div class="text">
+                    <h1><%= row.name %></h1>
+                    <div class="info">
+                       <p><%= row.property_type %></p>
+                       <p><%= row.room_type %></p>
+                    </div>
+                    <div class="info">
+                       <p>Bedrooms: <%= row.bedrooms %></p>
+                       <p>Beds: <%= row.beds %></p>
+                    </div>
+                    <div class="info">
+                        <p>Bathrooms: <%= row.bathrooms %></p>
+                        <p>$ <%= row.price %> / noche</p>
+                    </div>
+            </div>
+            </figure>
+          <% }) %>
+        </div>
+      </section>
+</body>
+</html>
